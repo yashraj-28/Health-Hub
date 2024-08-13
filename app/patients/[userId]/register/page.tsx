@@ -1,10 +1,13 @@
-import PatientForm from "@/components/forms/PatientForm";
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
-import Link from "next/link";
+import RegisterForm from '@/components/forms/RegisterForm'
+import { getUser } from '@/lib/actions/patient.actions'
+import Image from 'next/image'
+import Link from 'next/link'
+import React from 'react'
 
+const Register = async ({ params: { userId } }: SearchParamProps) => {
 
-export default function Home() {
+    const user = await getUser(userId);
+
   return (
     <div className="flex h-screen max-h-screen">
 
@@ -28,7 +31,7 @@ export default function Home() {
 
           </div>
           
-          <PatientForm />
+          <RegisterForm user={user}/>
 
           <div className="text-14-regular mt-20 flex justify-between">
 
@@ -46,12 +49,14 @@ export default function Home() {
       </section>
       
       <Image 
-        src='/assets/images/onboarding-img.png'
-        alt="doctors"
+        src='/assets/images/register-img.png'
+        alt="patient"
         width={1000}
         height={1000}
-        className="side-img max-w-[50%]"
+        className="side-img max-w-[400px]"
       />
     </div>
-  );
+  )
 }
+
+export default Register
