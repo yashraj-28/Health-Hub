@@ -13,8 +13,8 @@ const Register = async ({ params: { userId } }: SearchParamProps) => {
 
       {/* TODO: OTP Verification */}
 
-      <section className="remove-scrollbar container my-auto">
-        <div className="flex sub-container max-w-[496px]">
+      <section className="remove-scrollbar container">
+        <div className="flex-1 flex-col sub-container max-w-[860px] py-10">
           <div className="flex space-x-4 ">
 
             <Image 
@@ -33,17 +33,10 @@ const Register = async ({ params: { userId } }: SearchParamProps) => {
           
           <RegisterForm user={user}/>
 
-          <div className="text-14-regular mt-20 flex justify-between">
-
-            <p className="justify-items-end text-dark-600 xl:text-left">
-              © 2024 Health Hub
-            </p>
-
-            <Link href='/?admin=true' className="text-green-500">
-              Admin
-            </Link>
-
-          </div>
+          <p className="justify-items-end text-dark-600 xl:text-left pt-6">
+            © 2024 Health Hub
+          </p>
+          
 
         </div>
       </section>
