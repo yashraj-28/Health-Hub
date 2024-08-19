@@ -4,6 +4,7 @@ import "./globals.css";
 import {cn} from '@/lib/utils'
 import { ThemeProvider } from "next-themes";
 
+
 const fontSans = Plus_Jakarta_Sans
 ({ subsets: ["latin"],
   weight: ['300', '400', '500', '600', '700'],
@@ -14,6 +15,9 @@ const fontSans = Plus_Jakarta_Sans
 export const metadata: Metadata = {
   title: "Health Hub",
   description: "Healthcare Management System",
+  icons: {
+    icon: '/favicon.ico',
+  }
 };
 
 export default function RootLayout({
@@ -23,6 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      
       <body className={cn('min-h-screen bg-dark-300 font-sans antialiased', fontSans.variable)}>
       <ThemeProvider
             attribute="class"

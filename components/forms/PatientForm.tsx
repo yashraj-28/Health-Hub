@@ -70,6 +70,7 @@ const PatientForm = () => {
       console.log(error);
     }
     
+    setIsLoading(false);
   }
 
    return (

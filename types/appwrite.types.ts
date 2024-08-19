@@ -1,3 +1,4 @@
+import { Payment } from '@/components/table/columns';
 import { Models } from "node-appwrite";
 
 export interface Patient extends Models.Document {
@@ -33,4 +34,5 @@ export interface Appointment extends Models.Document {
   note: string;
   userId: string;
   cancellationReason: string | null;
+  
 }
